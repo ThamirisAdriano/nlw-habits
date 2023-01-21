@@ -19,6 +19,10 @@ header{
     justify-content: space-between;
 
     padding: 48px;
+
+/* analogia do prédio, quando usamos o fixed o el sobe um andar*/
+    position: fixed; 
+    width: 100%;
 }
 
 button{
@@ -42,8 +46,11 @@ button{
 
 #form-habits{
     display: flex;
-
-    padding: 0px 48px;
+/* esse padding foi ajustado para que o header ficasse fixo */
+/* 182px é o tamanho da caixa do header*/
+    padding: 182px 48px 48px;
+/* usado para encaixar o conteúdo*/
+    width: fit-content;
 }
 
 .habit{
@@ -109,4 +116,10 @@ input{
 input:checked {
     background: #8B5Cf6;
     border: 2px solid #A78BFA;
+}
+
+@media (max-width:570px) {
+    button div {
+        display: none;
+    }    
 }
